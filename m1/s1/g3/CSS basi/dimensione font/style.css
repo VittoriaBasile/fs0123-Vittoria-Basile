@@ -1,0 +1,44 @@
+/*
+posso modificare tutti i font del body.
+body{
+    font-size: 20px;
+}
+*/
+
+/* questo è un esempio
+@font-face {
+    font-family: FontPersonale(cartella con font scaricata da noi) ;
+    src: url(../ è un percorso per entrare in un' altra cartella   es. 'railway'.woff) format(lo troviamo dopo il punto in url es. woof);
+}
+
+*/
+
+@font-face {
+    font-family: FontPersonale;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+       
+    src: url();
+}
+
+:root{
+    font-size: 25px;
+}
+
+#t1{
+    font-size: 1rem;
+    color: #000;
+}
+
+#t2{
+    font-size: 16px;
+    color: rgb(0,0,255,0.5);
+}
+
+#parent{
+    font-size: 50px;
+}
+
+#t3{
+    font-size: 1em;
+}
