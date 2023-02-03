@@ -14,10 +14,15 @@
     text-align: center;
     background-color: black;
     background-size: contain;
+
+}
+.logoimg{
+    height: 100px;
+    width: 200px;
 }
  header img{
     width: 150px;
-    padding: 20px;
+    padding: 30px;
 }
 .blocco1{
     background-image: url(../images/banner.jpg);
@@ -25,14 +30,23 @@
     text-align: center;
     padding: 30px 20px;
 }
+.title1{
+    font-family: 'Montserrat', sans-serif;
+   color: #25a2c3;
+   font-size: 29px;
+   padding-right: 15%;
+   padding-left: 15%;
+   line-height: 1.5rem;
+   text-align: center;
+}
 
 .title{
    font-family: 'Montserrat', sans-serif;
    color: #25a2c3;
-   font-size: 25px;
+   font-size: 20px;
    padding: 100px;
    padding-top: 30px;
-   padding-bottom: 30px;
+   padding-bottom: 15px;
    line-height: 1.5rem;
    text-align: center;
 }
@@ -46,48 +60,111 @@
     font-size: 1.2rem;
     line-height: 1.65;
     text-align: center;
-    padding: 20px;
+    padding: 25px 50px;
+    
 }
 .partiamo{
     border-radius: 3px;
     background-color:#f04c2f;
     text-decoration: none;
     color:white;
-    padding-left: 10px;
-    padding-right: 10px;
-
+    padding:2.5% 4.5% ;
 }
 
 .img{
-    text-align: center;
+    width: 230px;
     border-radius: 50%;
-    
 }
+
+.imgmain{
+    text-align: center;
+}
+
 
 .red{
     text-align: center;
     background-color:#e22d0e;
     color:white;
+    line-height: 1.65;
 }
+
+.red1{
+    padding: 0 10% 5% 10%;
+}
+.red2{
+    padding: 0% 0 5% 0;
+}
+
+
+.aimg{
+    padding: none;
+}
+
+article{
+    border: 1px lightgray solid;
+}
+
+.article1{
+margin:17% 7% 10% 7%;
+
+}
+.article2{
+    margin:8.5% 7% 5% 7%;
+    
+}
+.article3{
+    margin:8.5% 7% 17% 7%;
+    
+}
+
 #title{
     color: white;
+    padding-bottom: 30px;
+    padding-top: 50px;
 }
 
 aside img{
     text-align: center;
     width: 100%;
     padding: 20px;
+    border: lightgray solid 1px;
+    padding: 0;
 }
- footer{
-    background-color: #c8c7f0;
+ #footer{
+    background-color: #25a2c3;;
     color:white;
     text-align: center;
     font-family: 'Open Sans', sans-serif; 
     line-height: 1.65;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 300px;
  }
-nav{
-    color:c8c7f0
+
+ footer h4{
+    color: white;
+    font-size: 30px;
+ }
+ 
+
+ .link{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ .footer{
+    border-bottom:1px white solid;
+    text-align: center;
+    padding: 15px 30px;
+    margin: 0 25% 5% 25%;
+      
+ }
+.copy{
+    padding:1.65rem 0 2.3rem 0;
+    
 }
+    
+
 
     
 
