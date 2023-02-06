@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/1.css">
+    <link rel="stylesheet" href="https://it.wikipedia.org/wiki/Pantera_nera">
+</head>
+<body>
+    <h1 id="ciao"></h1>
+
+
+    <label for="animali">Scegli un animale:</label>
+
+    <select onchange="animale(questo)" id="animali">
+      <option var="_pet2" value="pantera">Pantera</option>
+      <option var="$pet" value="giraffa">Giraffa</option>
+      <option var="_pet" value="leone">Leone</option>
+    </select>
+
+
+    <div id="testo">
+
+    </div>
+
+
+    <script>
+        document.getElementById('testo').innerHTML = 'scegli il tuo animale preferito';
+
+    </script>
+
+
+    <script src="js/index.js">
+
+    </script>
+    <script src="js/naming.js">
+
+    </script>
+
+</body>
+</html>
