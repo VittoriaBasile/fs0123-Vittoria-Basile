@@ -54,7 +54,13 @@ let x = 12;
   let name = 'Vittoria';
    name = 'Basile';
    console.log(name);
+  
 }
+
+
+const nome = 'Vittoria';
+nome = 'Basile'
+
 
 /* ESERCIZIO 6
  Crea una variabile "x" e assegna ad essa il numero 12.
