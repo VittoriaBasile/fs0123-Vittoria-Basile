@@ -62,6 +62,7 @@ console.log(divisibile5(10))
 function valore8(a,b){
   if (a === 8) {
     return 'a = 8';
+    } else if (b === 8) {
   } else if (a + b === 8){
     return 'a + b = 8';
   } else (a - b === 8) 
@@ -181,10 +182,10 @@ console.log(pari(5));
   let val = 7
 {
   if (val >= 10) {
-  console.log("Uguale a 10 o maggiore");
-      }if (val < 5) {
-    console.log("Meno di 5");
-  } else (val < 10) 
+    console.log("Uguale a 10 o maggiore");
+  }else if (val < 5) {
+       console.log("Meno di 5");
+    } else (val < 10) 
     console.log("Meno di 10");
   }
 
