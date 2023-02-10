@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+
+<div class="sfondo">
+    <div class="box">
+        <div class="display">
+            <input type="text" name="display" readonly="readonly" id="calcoli">
+        </div>
+        <div class="container">
+            <button data-simbolo="π" onclick="piGreco(this)" class="tasto" >π</button>
+            <button data-simbolo="√" onclick="radice(this)" class="tasto" >√</button>
+            <button data-simbolo="sin" onclick="seno(this)" class="tasto" >sin</button>
+            <button data-simbolo="cos" onclick="coseno(this)" class="tasto" >cos</button>
+        </div>
+    
+        <div class="container">
+            <button data-simbolo="(" onclick="addS(this)" class="tasto" >(</button>
+            <button data-simbolo=")" onclick="addS(this)" class="tasto" >)</button>
+            <button data-simbolo="%" onclick="percentuale(this)" class="tasto" >%</button>
+            <button data-simbolo="AC" onclick="canc(this)" class="tasto" >AC</button>
+        </div>
+        <div class="container">
+            <button data-simbolo="7" onclick="addS(this)" class="tasto" >7</button>
+            <button data-simbolo="8" onclick="addS(this)" class="tasto" >8</button>
+            <button data-simbolo="9" onclick="addS(this)" class="tasto" >9</button>
+            <button data-simbolo="/" onclick="addS(this)" class="tasto" >/</button>
+        </div>
+        <div class="container">
+            <button data-simbolo="4" onclick="addS(this)" class="tasto" >4</button>
+            <button data-simbolo="5" onclick="addS(this)" class="tasto" >5</button>
+            <button data-simbolo="6" onclick="addS(this)" class="tasto" >6</button>
+            <button data-simbolo="*" onclick="addS(this)" class="tasto" >X</button>
+        </div>
+        <div class="container">
+            <button data-simbolo="1" onclick="addS(this)" class="tasto" >1</button>
+            <button data-simbolo="2" onclick="addS(this)" class="tasto" >2</button>
+            <button data-simbolo="3" onclick="addS(this)" class="tasto" >3</button>
+            <button data-simbolo="-" onclick="addS(this)" class="tasto" >-</button>
+        </div>
+        <div class="container">
+            <button data-simbolo="0" onclick="addS(this)" class="tasto" >0</button>
+            <button data-simbolo="." onclick="addS(this)" class="tasto" >.</button>
+            <button data-simbolo="=" onclick="total(this)" class="tasto" >=</button>
+            <button data-simbolo="+" onclick="addS(this)" class="tasto" >+</button>
+        </div>
+    </div>
+</div>
+
+<script src="calc.js"></script>
+    
+</body>
+</html>
