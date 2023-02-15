@@ -12,37 +12,50 @@ const delBtn = document.querySelectorAll('.delete')
 
     addBtn.addEventListener('click', ()=>{
         
+            if(input.value.trim() !==''){
+
+                let bottone = document.createElement ("button");  
         
-            let bottone = document.createElement ("button");  
-        
-            bottone.className = 'delete';
-            bottone.innerHTML = 'X';
-            let newToDo = document.createElement("div");
-            newToDo.textContent = input.value;
-            toDoList.appendChild(newToDo);  
-            newToDo.appendChild(bottone);   
+                bottone.className = 'delete';
+                bottone.innerHTML = 'X';
+                let newToDo = document.createElement("div");
+                newToDo.textContent = input.value ;
+                toDoList.appendChild(newToDo);  
+                newToDo.appendChild(bottone);   
+                    
+                input.value = "";
+    
                 
-            input.value = "";
-
-
-
-            newToDo.addEventListener('click', ()=>{
-                    if (newToDo.style.textDecoration = 'none'){
-                    newToDo.style.textDecoration = 'line-through';
-                    } else{
-                        newToDo.style.remove(textDecoration = 'line-through');
-                    }
+                    
+    
+    
+    
+                newToDo.addEventListener('click', ()=>{
+                        if (newToDo.style.textDecoration = 'none'){
+                        newToDo.style.textDecoration = 'line-through';
+                        } else{
+                            newToDo.style.remove(textDecoration = 'line-through');
+                        }
+                    })
+                /*newToDo.addEventListener('click', ()=>{
+                        if (newToDo.style.textDecoration = 'line-through') {
+                            newToDo.style.textDecoration = 'none';
+                             
+                        }
+    
+                })*/
+    
+                bottone.addEventListener('click', () =>{
+                    newToDo.remove();
                 })
-            /*newToDo.addEventListener('click', ()=>{
-                    if (newToDo.style.textDecoration = 'line-through') {
-                        newToDo.style.textDecoration = 'none';
-                         
-                    }
 
-            })*/
 
-            bottone.addEventListener('click', () =>{
-                newToDo.remove();
-            })
+            }
+
+
+    
+        
+        
+           
 
         })     
