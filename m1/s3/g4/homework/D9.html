@@ -84,23 +84,10 @@
        for(i = 0; i<divs.length; i++) {
 
            divs[i].textContent = testo
-           
-         
         }
       }
       changePcontent('contenuto nuovo del paragrafo')
         
-          
-        
-       
-
-        
-        
-
-     
-
-      
-
       /* ESERCIZIO 4
        Scrivi una funzione per cambiare la proprietà href di ogni link a https://www.google.com
       */
@@ -112,31 +99,21 @@
         for(let i = 0; i < link.length; i++) {
 
         link[i].setAttribute('href', testo);
-        
-        
-        
-      }
+      
     }
-    
-    
-    
-
-    changeUrls('https://www.google.com');
+  } 
+  changeUrls('https://www.google.com');
 
       /* ESERCIZIO 5
        Scrivi una funzione per aggiungere un nuovo elemento alla seconda lista non-ordinata.
       */
 
       const addToTheSecond = function (content) {
-
-       
-
+        
         let lista2 = document.querySelector('#secondList');
         let li = document.createElement('li');
         lista2.appendChild(li);
         li.textContent = content;
-        
-        
       }
       addToTheSecond('nuovo elemento della lista');
 
@@ -145,8 +122,14 @@
       */
 
       const addParagraph = function (content) {
-        //
+        let divs = document.querySelectorAll('div');
+        let p = document.createElement('p');
+
+        divs[0].appendChild(p);
+        p.textContent = content;
       }
+
+      addParagraph('creazione nuovo paragrafo');
 
       /* ESERCIZIO 7
        Scrivi una funzione per far scomparire la prima lista non-ordinata.
@@ -164,31 +147,53 @@
       */
 
       const paintItGreen = function () {
-        let 
+        let ul1 = document.querySelector('#firstList');
+        let ul2 = document.querySelector('#secondList');
+        ul1.style.backgroundColor = 'green';
+        ul2.style.backgroundColor = 'green';
+    
       }
+
+      paintItGreen();
 
       /* ESERCIZIO 9
        Rendi il tag h1 capace di cambiare colore del testo ogni volta che l'utente ci clicca sopra.
       */
 
       const makeItClickable = function () {
-        //
-      }
+
+        let h1 = document.querySelector('h1');
+        h1.addEventListener('click', function(){
+
+          if(h1.style.color = 'red'){
+            h1.style.color = 'black';
+        }
+      })
+    }
+      makeItClickable();
 
       /* ESERCIZIO 10
        Cambia il testo del footer con qualcos'altro quando l'utente ci clicca sopra.
       */
 
-      const changeFooterText = function () {
-        //
+      const changeFooterText = function (content) {
+
+        let footer = document.querySelector('.footer');
+        
+        let h2 = document.querySelector('.footer h2');
+
+        h2.addEventListener('click', function(){
+          h2.innerHTML = content;
+        })
       }
+      changeFooterText('MA QUESTI ESERCIZI NON FINISCONO MAI?!?!')
 
       /* ESERCIZIO 11
        Aggiungi un event listener al campo di testo nella pagina e fai in modo che dopo ogni lettera il suo valore venga mostrato in console.
       */
 
       const inputField = document.getElementById('input-field')
-      // ...
+       func
 
       /* ESERCIZIO 12
        Crea un messaggio di benvenuto con un alert quando la pagina ha finito di caricarsi.

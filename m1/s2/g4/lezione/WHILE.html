@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+<script>
+
+//WHILE: ciclo più generico.il suo scopo è la lettura di una serie di elementi potenzialmente all' infinito, cioè fino a quando la condizione è vera.
+/*ha bisogno di una condizione di tipo booleano o 
+costringe JS a 'risalire' all' inizio del ciclo e a ricominciarne l' esecuzione all' infinito nel mmomento in cui si salva*/
+
+
+    let i = 0;
+    while(i < 10){
+        document.write(i);
+        i++;// incrementa i di 1 
+    }//torna alla riga 21
+
+    document.write('<br>Il ciclo ha finito le operazioni');
+
+//ES CON BREAK E CONTINUE
+
+
+        i = 0;// i è resettato a 0
+        while(i <= 5){
+
+            if(i == 2){
+                i++;
+                continue;// salta all' iterazione successiva
+            }
+
+            document.write(i);
+            i++;
+
+        }
+        i = 0;// i è resettato a 0
+        while(i <= 5){
+
+            if(i == 2){
+                i++;
+                break;// termina il ciclo nel momento in cui i == 2
+            }
+
+            document.write(i);
+            i++;
+
+        }
+
+</script>
+
+
+</body>
+</html>

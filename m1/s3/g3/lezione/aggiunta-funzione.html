@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>
+ {
+
+        let margherita = {
+
+            gusto : 'margherita',
+            prezzo : '5',
+            disponibile : true,
+            mostraPrezzo : function(){
+                console.log(`il prezzo della pizza margherita è di ${this.prezzo} €`);
+            }
+        
+            
+        }
+
+
+            let diavola = {
+
+            gusto : 'diavola',
+            prezzo : '1',
+            disponibile : true,
+            mostraPrezzo :function() {
+                console.log('il prezzo della pizza diavola è di 1 €');
+            }
+
+
+            }
+
+            let pizze = [margherita,diavola];
+
+
+            pizze.forEach( p =>{
+                p.mostraPrezzo = function(){
+                    console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);
+                }
+            })
+
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+       // lettura di un array
+       
+       let pizze = ['Margherita', 'Diavola', 'Marinara'];
+
+       pizze[2] = 'capricciosa';
+
+       // ordinamento
+
+       pizze.sort();
+
+       console.log(pizze);
+
+       // eliminare dalla fine di un array
+
+
+       let lettere = ['a', 'b','c','d','e','f','g','h','i','j','k','l'];
+    
+       let eliminato = lettere.pop(); // ci permette di visualizzare l' elemento eliminato
+
+       console.log(lettere, `hai eliminato il valore ${eliminato}`);
+
+       let len = lettere.push('#');
+
+       console.log(lettere,`la length aggiornata è ${len}`);
+
+        // eliminare e aggiungere all' inizio di un array
+
+        lettere = ['a', 'b','c','d','e','f','g','h','i','j','k','l'];
+
+        let eliminatoInizio = lettere.shift();
+        console.log(lettere, `hai eliminato il valore ${eliminatoInizio}`);
+
+        let letInizio = lettere.unshift('#');// aggiunto all' inizio
+
+        console.log(lettere, `la length aggiornata è ${letInizio}`);
+
+
+
+        // eliminazione da un qualsiasi indice
+
+
+        let indice = 0;// da dove inizio ad eliminare
+
+        let qty = 4; // quanti ne elimino
+
+        let eliminati = lettere.splice(indice,qty);// restituisce array di elementi rimossi
+
+        console.log(lettere, `valori rimossi : ${eliminati}`, eliminati);
+
+
+
+        //sostituzione da qualsiasi indice
+
+        lettere.splice(2,1,'###');// vai alla posizione 2, elimina 1 elemento, sostituiscilo con ###
+
+        console.log(lettere);
+
+        // concatenazione
+
+        let lettere1 = ['a', 'b','c','d'];
+        let lettere2 = ['e','f','g','h','i','j','k','l'];
+
+        let lettere3 = lettere1.concat(lettere2);
+        let lettere4 = lettere2.concat(lettere1);
+
+        let lettereDuplicato = lettere1.concat(lettere1);
+        
+        // con operatore di spread
+
+        let lettereSpread = [...lettere1,...lettere2] ; // restituisce un solo array con tutti gli elementi dell' array1 e dell' array2.
+
+        console.log(lettereSpread);
+
+        // assegnamento in destrutturazione
+
+        pizze = ['Margherita', 'Diavola', 'Marinara'];
+
+        let [margherita,diavola,marinara] = pizze;
+
+
+        console.log(margherita,diavola,marinara,pizze);
+
+        // slice estrae gli elementi indicati dai parametri assegnati
+
+        lettere = ['a', 'b','c','d','e','f','g','h','i','j','k','l'];
+
+        lettere.slice(1,2); // l' 1 è l' indice a cui si sta riferendo, 2 è l' indice al quale si deve fermare, non comprendendolo.in questo esempio,quindi, sta considerando solo la 'b'
+
+    </script>
+    
+</body>
+</html>

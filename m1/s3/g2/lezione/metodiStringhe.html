@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let stringa = 'ci manca molto il css';
+
+        console.log(stringa.indexOf('molto')); // index of è casesensitive. restituisce -1 se non trova nulla
+
+
+        let testo = 'Lorem ipsum####';
+
+        console.log(testo.replace('#',''));// REPLACE sostituisce solo la prima corrispondenza.
+        console.log(testo.replaceAll('#','')); // sostituisce tutte le corrispondenze.
+
+
+        // replace accetta anche   REGEX(replaceAll NON LO ACCETTA)
+
+        console.log(testo.replace(/#/g,'')); // la regex che indica g sostituisce tutte le corrispondenze
+
+        console.log(testo.replace(/l/i,'')); // cerca tutte le 'l' anche quelle maiuscole(case insensitive) e la sostituisce con elemento vuoto.
+
+        // SPLIT E JOIN
+
+        let csv = 'mario,rossi,30';
+
+        csv.split('')
+
+        console.log(csv.split(',')); // mi ritorna un array dei caratteri che compongono la stringa. con la virgola creiamo un array di parole e non di singoli caratteri.
+
+        let dati = ['mario', 'rossi',30];
+
+        /*let [nome,cognome,anni] = csv.split(',');*/
+
+        console.log(dati.join());
+    </script>
+</body>
+</html>

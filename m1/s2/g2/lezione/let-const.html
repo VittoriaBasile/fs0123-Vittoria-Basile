@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+      /*BLOCCO: spazio racchiuso tra 2 graffe.
+      le variabili con parola chiave var possono uscire dal blocco.
+      le variabili con parola chiave LET non possono uscire dal blocco(BLOCK SCOPE) a meno che non siano GLOBALI, ovvero definite al di fuori di un blocco.
+      es. un consol.log() di un identificativo di let al di fuori delle graffe ci darà come risultato in console IDENTIFICATIVO IS NOT DEFINED.
+      */ 
+
+
+      /*CONST
+      variabili che non possono essere riassegnate.(nell' es non si può cambiare OGGETTO)
+      l' identificativo di const è sempre scritto in maiuscolo.
+      può avere valori interni
+      */
+     //es
+        
+        const OGGETTO = {
+            nome: 'Mario',
+            cognome: 'Rossi'
+        }
+
+        OGGETTO.nome = 'Marco'
+
+        /* possono però cambiare i valori interni dell' oggetto di const.
+        con 
+        anche le const sono BLOCK SCOPE.
+        */
+     
+    </script>
+</body>
+</html>

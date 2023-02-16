@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <select  id="frutto" onchange="scegliFrutto()">
+            <option value="">--scegli--</option>
+            <option value="mela">Mela</option>
+            <option value="pera">Pera</option>
+            <option value="ananas">Ananas</option>
+            <option value="mango">Mango</option>
+            <option value="kiwi">Kiwi</option>
+        </select>
+
+        <div id="messaggio"></div>
+
+
+
+    <script>
+        function scegliFrutto() {
+            let frutto = document.getElementById('frutto').value; // si usa value piuttosto che inner.html perchè mi leggerebbe tutto il contenuto del tag select. si vuole invece leggere un valore alla volta.
+            
+            let messaggio = document.getElementById('messaggio')
+            
+
+            if(frutto == 'mela'){
+                messaggio.textContent = 'le Mele costano 1 euro?'
+            }else if(frutto == 'pera'){
+                messaggio.textContent = 'le Pere costano 0,99 euro?'
+
+            }else if(frutto == 'ananas'|| frutto == 'mango'){
+                messaggio.textContent = 'Ananas e Mango costano 3,99 euro?'
+            }else{
+                messaggio.textContent('non abbiamo' + frutto)
+            }
+        }
+    </script>
+</body>
+</html>

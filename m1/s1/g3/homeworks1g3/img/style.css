@@ -16,6 +16,7 @@
     margin-right: auto;
     padding-left: 5%;
     padding-right: 5%;
+
     
 }
 .h2{
@@ -32,4 +33,7 @@ padding-left: 1rem;
 .cit{
     text-align: center;
     color: grey;
+}
+.liste{
+    line-height: 3rem;
 }

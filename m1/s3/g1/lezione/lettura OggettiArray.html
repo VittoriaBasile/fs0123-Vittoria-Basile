@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+let obj = {
+    prop : 'prova1',
+    objFiglio : {
+        objFiglio : {
+    },
+    arrayFiglio : [
+            0, 
+            1, 
+            2, 
+            3,
+            {
+                proprioNimero : 1,
+                secondoNumero : 2,
+            }
+        ]
+
+    }
+}
+
+//LEGGERE PROPRIETà
+
+console.log(obj.prop);
+// SOVRASCIVERE UNA PROPRIETà
+obj.prop = 'prova2';
+
+//fare console.log della proprietà secondoNumero
+console.log(obj.objFiglio.arrayFiglio[3].secondoNumero); 
+
+
+
+//es oggetto con sintassi 'anomale'
+let objStrano = {
+    0 : 'valore',
+    1 : 'valore',
+    "due parole" : 'ciao',
+}
+
+objStrano['0']  //oppure 
+objStrano['1']  //oppure
+objStrano['due parole'] // gestione di un oggetto scritto in modo sbagliato 
+
+
+// lettura array
+let arr = [
+    1,
+    3,
+    6,
+    {
+        val1 : 7,
+        val2 : 10,
+        valArr : [7, 8, 9]
+    },
+    ['a', 'b', 'c', ['Hello', 'World']]
+];
+
+
+//leggo 8
+console.log(arr[3].valArr[1]);
+
+// leggo 'World'
+
+console.log(arr[4][3][1]);
+
+// costruttore oggetti(FUNZIONE COSTRUTTORE)
+
+function Pizza(_gusto,_prezzo){ // convenzione: scrivere una classe con la prima lettera maiuscola (in questo caso Pizza). La classe descrive istanza per creare un oggetto.
+    this.gusto = _gusto;// il this significa : a questo oggetto dai la proprietà gusto.
+    this.prezzo = _prezzo;
+}
+
+ let diavola = new Pizza('Diavola', 1); // il NEW ci dice: crea un nuovo uggetto basandoti sulle istruzioni descritte nella funzione costruttore.
+    </script>
+</body>
+</html>

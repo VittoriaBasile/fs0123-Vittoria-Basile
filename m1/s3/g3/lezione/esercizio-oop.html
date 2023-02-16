@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+class Pizza{
+            constructor(_gusto,_prezzo){// funzione che se richiamata istanzierà l'oggetto Pizza
+                           // ci serve per costruire le proprietà dell' oggetto e per valorizzarle, ma anche avviare una serie di processi così come farebbe una qualsiasi funzione.
+                           // è un metodo che si autoesegue QUINDI NON VA RICHIAMATO!
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.ponibile = true;
+            this.qnt = 5
+        }
+
+        mostraPrezzo(){
+            console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);
+        }
+
+        controllaDisp(){
+            if(this.qty == 0){
+                this.ponibile = false;
+            }else {
+                this.ponibile = true;
+            }
+            // oppure scrivere a sostituzione delle 5 righe precedenti: this.ponibile = this.qty == 0;
+        }
+
+        acquisto(numero){
+            if(!this.ponibile){ // se disp = false
+                return 'pizza non disponibile' // termina la funzione
+            }
+            if( numero <= this.qty ){
+                this.qty -= numero;
+                this.controllaDisp();
+
+
+            }else {
+                throw new Error('Quantità non disponibile');
+            }
+        }
+
+    }
+    let margherita = new Pizza('Margherita', 5);
+
+
+    margherita.acquisto(5);
+    console.log(margherita);// ora le pizze sono esaurite
+    
+    let risultato = margherita.acquisto(10);// non funziona
+    
+
+
+   // let diavola = new Pizza('Diavola', 1);
+
+   
+    </script>
+</body>
+</html>

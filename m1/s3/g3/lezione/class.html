@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+{
+    // COSTRUTTORE OGGETTI
+    // class : costrutto utile per creare oggetti e in alcuni casi ad istanziarlo(es Math. non viene istanziato)
+
+    class Pizza{
+            constructor(_gusto,_prezzo){// funzione che se richiamata istanzierà l'oggetto Pizza
+                           // ci serve per costruire le proprietà dell' oggetto e per valorizzarle, ma anche avviare una serie di processi così come farebbe una qualsiasi funzione.
+                           // è un metodo che si autoesegue QUINDI NON VA RICHIAMATO!
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.ponibile = true;
+        }
+
+        mostraPrezzo(){
+            console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);
+        }
+
+    }
+    let margherita = new Pizza('Margherita', 5);
+    let diavola = new Pizza('Diavola', 1);
+
+    margherita.mostraPrezzo();
+    diavola.mostraPrezzo();
+
+}
+
+    </script>
+</body>
+</html>

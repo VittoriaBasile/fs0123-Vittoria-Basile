@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    
+    <form id="mioForm">
+    <div>
+        <input type="text" id="nome"class = "notEmpty" placeholder="nome">
+        <span class="error"></span>
+    </div> 
+    <div>    
+        <input type="text" id="cognome"class = "notEmpty" placeholder = "cognome">
+        <span class="error"></span>
+    </div> 
+    <div>   
+        <input type="text" id="email"class ="notEmpty"  placeholder = "email">
+        <span class="error"></span>
+    </div>
+    <div>  
+        <input type="text" id="password" class = "notEmpty" placeholder = "password">
+        <span class="error"></span>
+    </div>   
+        <button type="button" id="show">mostra/nascondi</button>
+
+        <button id="send">Iscriviti</button>
+    </form>
+
+
+
+    <script>
+
+        let formBtn = getElementById('send');
+
+        mioForm.addEventListener('click', function(e){
+
+            e.preventDefault();// questo metodo blocca i funzonamenti predefiniti
+            console.log(e);// in 'e' è stato caricato tutto il bottone. avviene ogni volta che facciamo un eventListner su un oggetto ddel DOM
+
+            let nome = document.getElementById('nome');
+            let cognome = document.getElementById('cognome');
+            let email = document.getElementById('email');
+            let passwolrd = document.getElementById('password');
+           
+           
+           let campi = document.querySelectorAll('#mioForm .notEmpty');
+           let valid = true;
+
+           campi.forEach(campo => campo){
+            if (!campo.value){
+                campo.nextElementSibling.textContent = 'Devi inserire il' + nome.placeholder;
+                valid = false;
+            }else {
+                campo.nextElementSibling.textContent = '';
+            }
+           }
+        
+
+           if(valid){
+            //invio form
+           }
+           
+        }) 
+
+        
+        let show = document.getElementById("show");
+           show.addEventListener('click', function(e){
+            let password = document.getElementById('password');
+           })
+
+
+           
+          /*  modo ripetitivo che prende troppo tempo per fare la stessa cosa di sopra
+          if(nome.value){
+                nome.nextElementSibling.textContent = 'Devi inserire il' + nome.placeholder // con solo sibling avrebba preso il 'fratello' successico, cioè un text node e poi avremmo dovuto aggiungere un altro nextSibling per arrivare allo span. scrivendo nextElementSibling prende l' elemento fratello successivo, cioè lo span.
+                valid = false;
+            }else {
+                nome.nextElementSibling.textContent = '' + nome.placeholder
+            }
+            if(cognome.value){
+                cognome.nextElementSibling.textContent = 'Devi inserire il' + cognome.placeholder
+                valid = false;
+            }else{
+                cognome.nextElementSibling.textContent = '' + cognome.placeholder
+            }
+            if(email.value){
+                email.nextElementSibling.textContent = 'Devi inserire il' + email.placeholder
+               valid = false;
+            }else{
+                email.nextElementSibling.textContent = '' + email.placeholder
+            }
+            if(password.value){
+                password.nextElementSibling.textContent = 'Devi inserire il' + password.placeholder
+               valid = false;
+            } else{
+                password.nextElementSibling.textContent = '' + password.placeholder
+            }
+
+
+        })*/
+
+    </script>
+</body>
+</html>

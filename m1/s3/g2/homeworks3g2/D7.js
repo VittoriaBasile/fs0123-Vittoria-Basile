@@ -90,19 +90,21 @@ console.log(lista);
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
 
+
+  let n = [1,2,3,4,5,6,7,8,9,10];
   let pari = [];
 
   function creaPari() {
 
-      for (let i = 0; i <= 100; i++) {
+      for (let i = 0; i <= 10; i++) {
   
 
-      if (i % 2 === 0) {
-       pari.push(i);
+      if (n[i] % 2 === 0) {
+       pari.push(n[i]);
        }
     }
   }
-  creaPari();
+  creaPari();9
   console.log(pari);
 
 
@@ -159,6 +161,22 @@ console.log(frase);
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */
+n = [1,2,3,4,5,6,7,8,9,10];
+
+
+let listaPari = n.filter(function(i){
+     return i % 2 === 0;
+})
+
+console.log(listaPari);
+
+let listaDispari = [];
+
+function eliminaPari(n){
+
+  listaDispari += n.shift(listaPari)
+   
+}
 
 
 /* ESERCIZIO 10 (EXTRA)

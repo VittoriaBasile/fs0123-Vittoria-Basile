@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div id="prova"></div>
+
+<div class="quadrato"></div>
+
+<div class="quadrato"></div>
+
+<section id="area1">
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+</section>
+<section id="area2">
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+    <div class="blocco"></div>
+</section>
+
+    <script>
+
+        document.getElementById("prova"); // fanno la stassa cosa. il primo è più efficente in prestazioni
+
+    
+
+        document.querySelector('#prova'); // la differenza è che il secondo funziona con qualsiasi query(#) di css.ti trova il primo elemento con quella query. 
+        document.querySelectorAll('.quadrato'); //con querySelectorAll trova tutti gli elementi con quella query e ne crea un ARRAY!!!!.se non trova nessun elemento crea un ARRAY VUOTO
+
+        document.getElementsByClassName("quadrato");//  trova una lista di elementi(anche se l' elemento è solo uno).NON è UN ARRAY perchè non è ciclabile con I METODI DEGLI ARRAY.
+        document.getElementByTagName('div'); // trova sempre una lista non ciclabile con i metodi degli ARRAY.
+
+        // per ottenere un array ciclabile
+
+        let listaCiclabile = Array.from(document.getElementsByClassName("quadrato"));
+
+
+        document.querySelectorAll('#area1.blocco') // prende solo gli elementi figli dell' elemento con id area1
+
+        
+
+    </script>
+</body>
+</html>

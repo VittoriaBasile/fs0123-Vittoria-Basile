@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // OPERATORI DI ASSEGNAZIONE
+        let a = 2;
+        let b = 4;
+
+console.log(b)//4
+b = 6
+console.log(b)//6
+
+
+a += 2;  // 2+2
+console.log(a)
+
+// OPERATORI LOGICI
+
+let anni = 30;
+
+consol.log(30 < 18); //false
+console.log(30 > 18); //true
+
+console.log(18 >= 18);// true
+
+
+
+if(anni == 20){
+
+console.log('ok')
+
+}
+
+console.log(anni == '30');// conversione e comparazione perchè viene valutato il dato e non il tipo.
+console.log(anni === '30');// il === controlla che siano uguali valore e tipo di dato.
+
+console.log(anni >= 18 && anni <= 110);// ci sarà un unico true se entrambe le comparazioni sono vere.
+console.log(!(anni >= 18 && anni <= 110));// il NOT può invertire forzatamente il valore booleano. si potreppe usare per esempio nel caso di un form che non è stato ancora copilato per dire di considerare come true anche un identificativo senza ancora alcun valore.
+    
+    
+    // tipeof funziona in js su tutto tranne gli array.
+    // OPERATORE TERNARIO
+    let controllo = anni >= 18 ? 'Sei maggiorenne' : 'Sei minorenne';
+    console.log(controllo);
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

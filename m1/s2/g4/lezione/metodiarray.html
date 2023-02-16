@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        array.metodo(funzione)//funzione argomento di un' altra funzione CALL BACK.
+
+        //FOR EACH serve solo ed esclusivamente a ciclare gli array
+
+        let pizze = ['Margherita', 'Diavola', 'Marinara','Mimosa'];
+
+        pizze.forEach(function(elemento){
+
+            document.write(elemento)
+
+        })
+
+
+        // MAP funziona come for each ma ci serve per modificare ogni elemento dell' array prima di mostrarlo all' utente(cambia l' array)
+       
+        let numeri = [1, 2, 3, 4, 5, 6, 7]
+        let numeriX2 = numeri.map(function(n){
+            return n * 2// dopo return ci si mette la modifica che vogliamo fare ad ogni elemento dell' array.
+        })
+
+        console.log(numeriX2);
+
+        //FILTER restituisce array modificato, filtrato. se la funzione non porta a nessun elemento dell' array, filter restituisce sempre e comunque un array che in questo caso sarà vuoto
+
+
+        let numeriFiltrati = numeri.filter(function(n){
+            return n > 3
+        })
+        console.log(numeriFiltrati);
+
+        //FIND restituisce il primo valore trovato ( non un array)
+
+        let numeroTrovato = numeri.find(function(n){
+            return n > 3
+        })
+        console.log(numeroTrovato);
+        // FINDINDEX uguale a find; restituisce la posizione dell' elemento trovato dalla funzione e non il suo valore. usato principalmente per un array di oggetti
+
+
+        // REDUCE
+
+        let somma = numeri.reduce(function(p,c){// somma i primi 2 numeri (che diventano il valore di p) e li somma al terzo numero (valore c). questa somma diventa il valore del nuovo p e lo somma al c successivo.
+
+            return p + c
+        })
+
+        let numeroGrande = numeri.reduce(function(p,c){
+                if(p > c){ 
+                    return p;
+                }else{
+                    return c
+                }
+        })
+
+        console.log(numeroGrande);
+
+        // ELIMINARE DA UN ARRAY PER ESCLUSIONE
+
+        pizze = pizze.filter(function(p){
+            return p != 'Mimosa'
+        })
+
+        console.log(pizze);
+
+        // ELIMINAZIONE DIRETTA(SPLICE) non restituisce un array modificato, ma lo stasso array senza un elemento che viene eliminato.
+
+        let indice = pizze.indexof('Marinara');// trova marinara e mi dice il suo indice(posizione)
+
+        pizze.splice(indice,1)// elimino la marinara. L' 1 si siferisce alla quantità di elementi che si vogliono eliminare. se metti 2 ti elimina l' elemento selezionato e quello dopo.
+        console.log(pizze);
+
+        //ELIMINAZIONE DA ARRAY DI OGGETTI
+
+        pizze = [
+            {
+                gusto : 'Margherita',
+                prezzo : 5,
+                disponibile : true
+
+            },
+            {
+                gusto : 'Diavola',
+                prezzo : 1,
+                disponibile :true
+
+            },
+            {
+                gusto : 'Mimosa',
+                prezzo : 100,
+                disponibile : false
+
+            }
+        ];
+
+        let index = pizze.findIndex(function(p){
+            return !p.disponibile
+        })
+        console.log(index);
+        pizze.splice(index,1);
+        console.log(pizze)
+    </script>
+</body>
+</html>

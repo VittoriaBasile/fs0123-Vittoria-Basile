@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+//DEFINIRE FUNZIONE
+        saluto()// una volta lanciata una funzione non è importante la posizione del lancio. basta poi descrivere la sua esecuzione(definirla).
+      function saluto(){       // descrizione dell' esecuzione.
+        console.log('ciao');
+      }
+
+        saluto()
+
+    function restituisciSaliuto(){
+        return 'Benvenuto' // return termina la funzione. per questo si può usare una sola volta alla fine.
+    }
+
+    console.log(restituisciSaluto());
+
+
+    //scope nelle funzioni(ambito in cui valgono le variabili)
+
+    let a = 0;
+
+    function scope(){
+        console.log('let a =' + a); // a è raggiungibile perchè globale
+        var b = 100;// b non è raggiungibile dall' esterno.
+    }
+
+    //FUNZIONI PARAMETRICHE
+
+    function somma(a,b){
+        console.log(a+b);
+    }
+
+    somma(2,6)
+
+    function restituisciSomma(a,b){
+        return a + b;
+    }
+
+    console.log(restituisciSomma(3,6));
+
+    //closure
+
+       function funzione1(){
+            let a = 100      
+        
+            function funzione2(){  /*non posso usare questa funzione al di fuori della funzione1. posso però richiamare la funzione1 per innescare la funzione2.
+                                     le variabili create nella funzione2 non potranno essere richiamate al di fuori del loro blocco, come per es nella funzione1*/ 
+                console.log(a);
+                var x = 3;
+                console.log(a + x);
+            }
+       }
+
+       funzione1()
+
+       /*variabili che contengono funzioni*/
+
+
+       let fn = function(){
+            return ('ok');   
+       }
+        console.log(fn);//vedo il contenuto una funzione
+        console.log(fn());//eseguo una funzione e ne ricevo il risultato
+
+        function A(x){
+            return function b(y){
+
+                return function c(z){
+                    return x + y + z;
+                }
+            }
+        }
+
+        console.log( A(2)(3)(7));
+        let h = A(2);
+        let g = h(3);
+        console.log(g();
+    </script>
+</body>
+</html>

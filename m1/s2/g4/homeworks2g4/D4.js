@@ -120,8 +120,6 @@ for (let nomi of starWarsCharacters) {
 
 
 
-
-
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un array chiamato "femaleCharacters" e inserisci un oggetto con questa struttura: 
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
@@ -192,18 +190,18 @@ console.log(eyeColor);
   Usa un while loop per calcolare la massa totale dell'equipaggio
   */
 
-let i = 0
-let massa = 0
+let i = 0;
+let massa = 0;
 for( let personaggio of starWarsCharacters) {
       
     while (i < starWarsCharacters.length) {
-      massa + personaggio.mass;
+      massa += parseInt(personaggio.mass);
       
     i++;
     break;
 }
 }
-
+console.log('massa= ' + massa);
 /* ESERCIZIO 7
 
 Crea uno switch statement per rivelare la tipologia di carico, utilizzando la massa totale, di un'impotetica astronave contenente i personaggi dell'array "starWarsCharacters"
@@ -218,9 +216,51 @@ Se la massa è superiore a 1000 stampa in console: "DANGER! OVERLOAD ALERT: Jump
 Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
 
+console.log('svolto con switch case');
+
+switch (true) {
+  case massa > 500:
+    console.log('Ship is under loaded');
+  break;
+
+  case massa === 500:
+    console.log('Ship is half loaded');
+  break;
+
+  case massa > 700 && massa <= 900:
+    console.log('Warning: Load is over 700');
+  break;
+
+  case massa > 900 && massa <= 1000:
+    console.log('Critical Load: Over 900');
+  break;
+
+  case massa > 1000:
+    console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
+  break;
+}
+
+
+console.log('svolto con if-else if');
+
+if (massa < 500) {
+    console.log('Ship is under loaded');
+} else if (massa === 500) {
+    console.log('Ship is half loaded');
+} else if (massa > 700 && massa <= 900) {
+    console.log('Warning: Load is over 700');
+} else if (massa > 900 && massa <= 1000) {
+    console.log('Critical Load: Over 900');
+} else if (massa > 1000) {
+    console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
+}
+
+
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
+
+
 
 /* EXTRA ESERCIZIO 9
 

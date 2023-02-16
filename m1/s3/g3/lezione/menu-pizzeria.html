@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div id="target"></div>
+
+
+    <script>
+
+        let menu = [
+            {
+                gusto : 'Margherita',
+                prezzo : 5,
+                disponibile : true
+            },
+            {
+                gusto : 'Diavola',
+                prezzo : 1,
+                disponibile : true
+            },
+            {
+                gusto : 'Capricciosa',
+                prezzo : 8,
+                disponibile : true
+            },
+            {
+                gusto : 'Ananas',
+                prezzo : 50,
+                disponibile : false
+            }
+        ];
+
+        let target = document.getElementById('target');
+
+        for( pizza of menu){
+            let div = document.createElement('div');// crea e salva nel let div un oggetto html di tipo div che permette quindi di usare i metodi degli oggetti!!!
+            div.textContent = pizza.gusto; // aggiunge il contenuto
+            div.classList.add('item') // aggiunge la classe 
+
+            target.append(div) // si può fare append di vari elementi, anche di stringhe
+
+            consol.log(div);
+
+            target.innerHTML += `<div class = "item">${pizza.gusto}</div>`;
+
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+// CREAZIONE MANUALE DI UN OGGETTO
+
+{
+
+let margherita = {
+
+    gusto : 'margherita',
+    prezzo : '5',
+    disponibile : true,
+    mostraPrezzo : function(){
+        console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);// se avessi usato una funzione freccia il this si sarebbe agganciato a windows(male male)
+    }
+   
+    
+}
+
+
+    let diavola = {
+
+    gusto : 'diavola',
+    prezzo : '1',
+    disponibile : true,
+    mostraPrezzo :function() {
+        console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);
+    }
+
+
+    }
+
+    console.log(margherita);
+
+
+    margherita.mostraPrezzo()// lo posso scrivere senza log perchè è una funzione...non avrebbe senso per le altre proprietà
+
+    margherita.prezzo = 4;
+
+    console.log(margherita.prezzo);
+    margherita.mostraPrezzo(); // mi dirà 5. Basterà mettere la stringa della funzione in backtick e cambiare 5 con ${this.prezzo}.
+
+    diavola.mostraPrezzo()
+}
+
+{
+    // COSTRUTTORE OGGETTI
+
+    function Pizza(_gusto,_prezzo){
+        this.gusto = _gusto;
+        this.prezzo = _prezzo;
+        this.disponibile = true;
+        this.mostraPrezzo = function(){
+            console.log(`il prezzo della ${this.gusto} è di ${this.prezzo} €`);
+        }
+    }
+
+    let margherita = new Pizza('margherita', 5);
+    let diavola = new Pizza('diavola',1);
+
+}
+
+
+
+    </script>
+</body>
+</html>

@@ -64,12 +64,12 @@ nav a::before {
 
 /* MAIN */
 .mas {
-  background-color: #0088aa;
   padding: 15px;
   margin-bottom: 11px;
   font-weight: 500;
   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
   background-color: white;
+  font-size: 1.3rem;
 }
 
 main h1 {
@@ -80,9 +80,10 @@ main h1 {
 
 .autor {
   margin: 1rem 0;
+  color: lightgray;
 }
 
-main span {
+.spanpurple {
   color: #a91c70;
 }
 .perp p {
@@ -92,14 +93,20 @@ main span {
 p,
 ul,
 ol {
-  line-height: 1.5rem;
+  line-height: 2rem;
 }
 
 .mas ul,
 ol {
   margin-left: 2rem;
 }
-/* ELEMENTI NEL MAIN - ARTICLE */
+
+.spanul{
+  border:2px grey solid;
+  border-radius: 10px;
+  background-color: lightgray;
+
+}
 
 /* TABELLE */
 

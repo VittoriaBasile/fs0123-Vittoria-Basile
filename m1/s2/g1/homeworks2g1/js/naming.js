@@ -16,6 +16,7 @@ var _pet2 = 'pantera';
 //document.write(_pet2);
 
 
+
 var myArray = ['one', 'two', 'three', 'four', 'five'];
 var rand = Math.random()*myArray.length | 0;
 var rValue = myArray[rand];

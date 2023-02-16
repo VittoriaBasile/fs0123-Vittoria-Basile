@@ -19,6 +19,8 @@ const delBtn = document.querySelectorAll('.delete')
                 bottone.className = 'delete';
                 bottone.innerHTML = 'X';
                 let newToDo = document.createElement("div");
+                newToDo.className = 'todo';
+                
                 newToDo.textContent = input.value ;
                 toDoList.appendChild(newToDo);  
                 newToDo.appendChild(bottone);   
@@ -30,18 +32,18 @@ const delBtn = document.querySelectorAll('.delete')
     
     
     
-                newToDo.addEventListener('click', ()=>{
+               newToDo.addEventListener('click', ()=>{
                         if (newToDo.style.textDecoration = 'none'){
                         newToDo.style.textDecoration = 'line-through';
                         } else{
                             newToDo.style.remove(textDecoration = 'line-through');
                         }
                     })
-                /*newToDo.addEventListener('click', ()=>{
-                        if (newToDo.style.textDecoration = 'line-through') {
-                            newToDo.style.textDecoration = 'none';
-                             
-                        }
+               /* newToDo.addEventListener('click', ()=>{
+                     
+  
+                     newToDo.todo.toggle("todo-list");
+                    
     
                 })*/
     

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function saluto(){
+            console.log('ciao');
+        }
+
+        saluto();
+
+
+        function restituisciSaluto(){
+            return 'benvenuto';
+        }
+        let dato = restituisciSaluto();
+        console.log(dato);
+
+        // funzioni parametriche
+
+        function somma(a, b){
+            console.log(a + b);
+        }
+        somma(2, 8);
+        somma();// i parametri non valorizzati saranno impostati come undifinded.
+
+        // gestione dei parametri mancanti
+
+        function sommaPlus(a, b, c){
+            let num = 0
+            if(a){// se a ha un valore
+                num += a
+            }
+
+            if(b){
+                num += b
+            }
+
+            if(c){
+                num += c
+            }
+            console.log(a + b + c);
+
+
+        }
+
+        // imposto un valore di default ai parametri
+        function sommaPlusDefault(a = 0, b = 0, c = 0){
+            console.log(a + b + c);
+        }
+
+        sommaPlus(2, 4);
+        sommaPlus(2, 4, 6);
+
+        // clousure
+        function clousure(){
+
+            let numero = 10;
+            function figlia(){
+                return numero * 2
+            }
+            return figlia();
+        }
+
+        console.log(closure());
+
+
+        // self invoking function
+
+        (function(){
+
+            console.log('auto invocation');
+        })()
+
+        let d = (function(){
+            return 'valore restituito dalla funzione auto invocata';
+        })()
+
+        console.log(d);
+
+
+        // funzioni freccia
+
+        let nomeFunzione = () => {
+            console.log('funzione freccia eseguita');
+        }
+
+        nomeFunzione();
+    //in mancanza di graffe il return è implicito, è sbagliato scriverlo
+    // con un solo parametro le tonde sono facoltative
+        let grassetto = (stringa) => `<b>${stringa}</b>`;
+        // senza le graffe posso strutturare solo funzioni oneline
+
+
+        // con più di un parametro le tonde sono obbligatorie
+        let sommaFreccia = (a,b) => a + b;
+        console.log(sommaFreccia(3,70));
+
+        // spread operator sulle funzioni
+
+        let sommaProUltra = (...numeri) => numeri.reduce((p,c)=> p + c);
+        console.log(sommaProUltra(1, 50, 90, 700, 5));
+
+        
+    </script>
+</body>
+</html>

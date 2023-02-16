@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form id="mioForm">
+        <div>
+            <input type="text" id="nome"class = "notEmpty" placeholder="nome">
+            <span class="error"></span>
+        </div> 
+        <div>    
+            <input type="text" id="cognome"class = "notEmpty" placeholder = "cognome">
+            <span class="error"></span>
+        </div> 
+        <div>   
+            <input type="text" id="email" required pattern="[a-z0-9]{2,10}@[a-z0-9]{2,10}.[a-z]{2,6}" class ="notEmpty"  placeholder = "email">
+            <span class="error"></span>
+        </div>
+        <div>  
+            <input type="text" id="password" class = "notEmpty" placeholder = "password">
+            <span class="error"></span>
+        </div>   
+            <button type="button" id="show">mostra/nascondi</button>
+    
+            <button id="send">Iscriviti</button>
+        </form>
+    
+
+    <script>
+
+let formBtn = getElementById('send');
+
+            let nome = document.getElementById('nome');
+            let cognome = document.getElementById('cognome');
+            let email = document.getElementById('email');
+            let passwolrd = document.getElementById('password');
+
+            console.log(nome.checkValidity(), nome.validationMessage, nome.validity);
+            console.log(cognome.checkValidity(), cognome.validationMessage, nome.validity);
+            console.log(email.checkValidity(), email.validationMessage, nome.validity);
+            console.log(password.checkValidity(), password.validationMessage, nome.validity);
+           
+
+mioForm.addEventListener('click', function(e){
+
+    e.preventDefault();// questo metodo blocca i funzonamenti predefiniti
+    console.log(e);// in 'e' è stato caricato tutto il bottone. avviene ogni volta che facciamo un eventListner su un oggetto ddel DOM
+
+    let nome = document.getElementById('nome');
+    let cognome = document.getElementById('cognome');
+    let email = document.getElementById('email');
+    let passwolrd = document.getElementById('password');
+   
+   
+   let campi = document.querySelectorAll('#mioForm .notEmpty');
+   let valid = true;
+
+   campi.forEach(campo => campo){
+    if (!campo.value){
+        campo.nextElementSibling.textContent = 'Devi inserire il' + nome.placeholder;
+        valid = false;
+    }else {
+        campo.nextElementSibling.textContent = '';
+    }
+   }
+
+
+   if(valid){
+    //invio form
+   }
+   
+}) 
+
+
+let show = document.getElementById("show");
+   show.addEventListener('click', function(e){
+    let password = document.getElementById('password');
+   })
+
+
+    </script>
+</body>
+</html>

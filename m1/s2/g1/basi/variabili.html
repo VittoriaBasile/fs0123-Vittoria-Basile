@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        var numero = 5; // variabile-identificativo-valore.  il var và scritto solo nella prima riga di identificazione; nelle righe successive và scritto solo l' identificativo.
+        var nomeUtente = 'mario';
+
+    
+    console.log(numero, nomeUtente);
+    
+/* se scrivo numero = 8 la riga con numero = 5 "smette di esistere. in css la regola scritta in precedenza può tornare a funzionare se noi volessimo...in js la riga precedente viene sovrascritta"*/
+
+
+    // js è debolmente tipizzato...cioè non c'è bisogno di specificare di che tipo di dato stiamo parlando(es. se si scrive solo un numero lo prenderà come tale...se lo si mette tra virgolette lo prenderà come testo)
+   /*
+   
+   Tipi di dato:
+   stringa   "" oppure ''
+   number  5
+   boolean  true oppure false
+   arrey []
+   object {}
+   */
+
+    var a = 2;
+    var b = 3;
+    var c = a + b;
+
+    console.log(c, a + b);
+
+    /*
+    operatori aritmetici
+    +  somma
+    /  divisione
+    *  moltiplicazione
+    -  sottrazione
+    */
+
+    var nome = "Mario";
+    var saluto = "ciao";
+
+    console.log(saluto + '' + nome);
+
+    /*
+    conversione tipi di dato
+    parkour 
+    */
+
+    var num = 10;
+    var strNum = '10';
+
+    console.log(num + strNum) // il numero si converte in stringa per opera di js.
+    console.log(num * strNum); // la stringa viene convertita in numero e ci sarà una moltiplicazione. se il valore di strNum contenesse anche una lettera non sarebbe possibile la conversione e js ci dirà che il risultato è none, ovvero non è un numero.  
+    
+    console.log( typeof num)
+    
+    </script>
+</body>
+</html>

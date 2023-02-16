@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+
+      /* let a = 1;
+        let b;// la rendo asincrona...arriverà in futuro.PROMISE è la promessa a js che il dato arriverà; quindi diciamo a js di continuare con altre funzioni nel frattempo.
+    */
+
+    console.log('inizio');
+        let p = new Promise(function(success){
+
+        //con setTimeout simuliamo l' attesa di 5 secondi, come se attendessimo risposta dal server
+            setTimeout(function(){
+                
+                success('Hello World!');// quando la risposta arriva invia il dato Hello World! al then
+           
+            },5000)
+        });
+
+        p.then(risposta => {// attendi che p abbia finito
+            // quando ha finito scatena questa callback
+        console.log(risposta);
+        
+        })
+
+
+        console.log('fine');
+
+        // in console torneranno rispettivamente prima 'inizio' e 'fine' e dopo 5 secondii Hello World!; quindi console.log('fine') non ha aspettato il caricamento della funzione succes.
+
+    </script>
+</body>
+</html>

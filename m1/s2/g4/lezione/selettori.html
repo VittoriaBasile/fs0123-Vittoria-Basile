@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="text">hello world</div> 
+
+<div class="elemento"></div>
+<div class="elemento"></div>
+<div class="elemento"></div>
+<div class="elemento"></div>
+<div class="elemento"></div>
+
+    <script>
+// il div richiamato da js è UN OGGETTO!!!!
+    let test = document.getElementById('text')
+    console.dir(test.textContent);
+
+    test.textContent = "ciao mondo"
+    console.dir(test.textContent);
+
+
+    let elementi = document.getElementsByClassName('elemento'); 
+    console.log(elementi);
+
+    // elementi[0].textContent = 'ciao'
+
+
+    for (let elemento of elementi) {
+        elemento.textContent = 'ciao';
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        //OGGETTO: lista di elementi aventi indice testuale. Lo riconosciamo dalle parentesi graffe.non si può fare consol.log di un oggetto.
+
+        let pizza = {
+            gusto : 'margherita',  // es di come è rappresentato un oggetto. gusto e prezzo sono proprietà dell' oggetto pizza.
+            prezzo : 5,
+            mostraPrezzo: function(){
+                console.log(`La pizza ${this.gusto} costa ${this.prezzo} €`); //gli oggetti possono contenere funzioni. questa la chiameremo METODO.
+
+            }
+
+
+        }
+
+        console.table( pizza)// in console ho tutta la tabella delle proprietà dell' oggetto
+
+       console.log( pizza.gusto );
+       
+       pizza.gusto = 'diavola'
+       console.log( pizza.gusto ); // è stata cambiata la proprietà gusto dell' oggetto pizza.
+
+
+       pizza.mostraPrezzo()
+//UTILIZZO DEI METODI
+//costruttore degli oggetti. hanno sempre lettera maiuscola.
+
+{
+        function Pizza(gusto, prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.mostraPrezzo = function(){
+                console.log(`La pizza ${this.gusto} costa ${this.prezzo} €`); 
+        }
+    }
+
+    let margherita = new Pizza('Margherita',5);
+    let diavola = new Pizza('Diavola',1);
+
+    console.log(margherita);
+    console.log(diavola);
+}
+
+    </script>
+</body>
+</html>

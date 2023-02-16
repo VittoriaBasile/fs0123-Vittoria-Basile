@@ -1,0 +1,20 @@
+section > span{
+    text-decoration:line-through
+}
+/* col segno maggiore si vanno a selezionare solo i figli diretti di un contenitore*/
+
+section + small{
+    font-weight: bold;
+}
+/*il + va a selezionare il primo small subito dopo la section*/
+
+#toggle{
+display: none;
+}
+#menu{
+    background-color: bisque;
+    height: 0;
+    overflow: hidden;
+    transition: heigth 0.3;
+}
+/*gli elementi selezionati fino ad overflow viene nascosto. se si aggiunge transition

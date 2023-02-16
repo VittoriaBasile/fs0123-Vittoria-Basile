@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+
+        class Veicoli{
+            constructor(_tipo,_nRuote,_maxVel, _nPorte,_marca) {
+                this.tipo = _tipo;
+                this.nRuote = _nRuote;
+                this.maxVel = _maxVel;
+                this.nPorte = _nPorte;
+                this.marca = _marca;
+
+            }
+
+            accelera(numero){
+                if(this.vel = this.maxVel){
+                    this.vel += numero;
+                }
+            }
+                frena(numero){
+                    if(this.vel > 0){
+                        this.vel -= numero;
+                    }
+                }
+            
+        }
+
+        let bici = new Veicoli('bicicletta',2,40,0,'Trek')
+        let bici1 = new Veicoli('bicicletta',2,30,0,'Bianchi')
+        let bici2 = new Veicoli('bicicletta',2,50,0,'Trek')
+
+        class Bici extends Veicoli{
+            constructor(_maxVel,_marca){// costruttore di bici
+                super('Bicicletta',2,_maxVel,0,_marca);// eredita le proprietà del costruttore di veicoli
+                this.haRotelle = false;// nuova propeietà solo della classe bici e nel caso delle sue espansioni, ma non di veicoli
+
+            
+            }
+            rotelle(){
+                if(this.haRotelle){
+                    this.ruote -= 2
+                }else{
+                    this.nruote += 2
+                }
+            }
+
+
+        }
+
+        let bici4 = new Bici ('bicicletta',2,30,0,'Trek');
+        console.log(bici4);
+    </script>
+</body>
+</html>l

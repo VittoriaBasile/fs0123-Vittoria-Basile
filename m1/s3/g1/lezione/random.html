@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let lettereMaiusc = 'SGFJHHGKJHGE'
+       let lettereMinusc = lettereMaiusc.toLowerCase();
+       let num = 0123456789;
+       let simboli = '!"£$%&';
+
+       let chars = lettereMaiusc + lettereMinusc + num + simboli;
+
+        console.log(chars[0,2]);
+
+
+        function generaPassword(lunghezza){
+            let password = '';
+            for (var i = 0; i < 10; i++){
+
+            let rand = Math.floor( Math.random() * chars.length); // da 0 a 70
+                password += chars[rand];
+
+            }
+            return password;
+        }
+
+       let stringa = generaPassword(12);
+       console.log(stringa);
+    </script>
+</body>
+</html>
