@@ -92,7 +92,7 @@ function shoppingCartTotal(shoppingCart) {
 
 
 function newObj(name, price, id, quantity) {
-    newObj.name = "scerpe";
+    newObj.name = "scarpe";
     newObj.price = 100;
     newObj.id = 4;
     newObj.quantity = 1;

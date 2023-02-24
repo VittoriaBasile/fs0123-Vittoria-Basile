@@ -472,7 +472,7 @@ function newesMovie(){
     anni.push(film.Year);
     console.log(anni);
     for (let i = 0; i < anni.length; i++){
-      if(anni[i] > anni[i+i] && anni[i] != anni[i+i]) {
+      if(anni[i] > anni[i+1] && anni[i] != anni[i+1]) {
          console.log(annoRecente = anni[i]);
       } else {
         annoRecente = anni[i+1];
