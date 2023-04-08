@@ -108,7 +108,19 @@ ol {
 
 }
 
-/* TABELLE */
+.dati {
+  background-color:#3c6ac9 ;
+  color: white;
+}
+
+.casellaD {
+  border: white 1px solid;
+  height: 3rem;
+  width: 9rem;
+  text-align: center;
+  padding-top: 1rem auto;
+  
+}
 
 /* FORM */
 
